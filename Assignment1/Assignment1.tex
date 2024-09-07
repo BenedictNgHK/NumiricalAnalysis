@@ -28,7 +28,7 @@ Let \(f(x)=e^{-x^2}\) and expand the original equation with Taylor Series at poi
 And its first 6 non-zero terms are:
 \begin{flalign*}
 \int_{0}^{1}f(x)    &\approx \int_{0}^{1} (1 - x^2 + \frac{x^4}{2!} - \frac{x^6}{3!} + \frac{x^8}{4!} - \frac{x^{10}}{5!})|_{0}^{1} &\\
-                    &\approx  x - \frac{x^3}{3} + \frac{x^5}{5 \cdot 2!} - \frac{x^7}{7 \cdot 3!} + \frac{x^9}{9 \cdot 4!} - \frac{x^11}{11 \cdot 5!}|_{x=0}^{x=1} &\\
+                    &\approx  x - \frac{x^3}{3} + \frac{x^5}{5 \cdot 2!} - \frac{x^7}{7 \cdot 3!} + \frac{x^9}{9 \cdot 4!} - \frac{x^{11}}{11 \cdot 5!}|_{x=0}^{x=1} &\\
                     &\approx \Sigma_{m = 0}^{m = 5}\frac{{(-1)^m}}{(2m+1) \cdot m!} &
 \end{flalign*}\newpage
 
@@ -44,16 +44,16 @@ And its first 6 non-zero terms are:
     \end{center}
 \subsection*{Truncation Error}
 \begin{center}
-    \(R_n = x^* - x = \Sigma_{n = 6}^{n \to \infty}\frac{{(-1)^{n+1}}}{(2n+1) \cdot n!}\)  
+    \(R_n = x - x^* = \Sigma_{n = 6}^{n \to \infty}\frac{{(-1)^{n}}}{(2n+1) \cdot n!}\)  
 \end{center}
 \subsection*{Roundoff Error:}
 The python code suggests that the \(x^* =  0.7467291967291968.\) Suppose that only preseve 4 digits after decimal point.
 \subsubsection*{Round-by-chop}
 \begin{center}
-    \(x = 0.7467\) \(E = x - x* = 0.0000291967291968 \)
+    \(x = 0.7467\) \(E = x^* - x = -0.0000291967291968 \)
 \end{center}
 \subsubsection*{Round-to-nearest}
 \begin{center}
-    \(x = 0.7467\) \(E = x - x* = 0.0000291967291968 \)
+    \(x = 0.7467\) \(E = x^* - x = -0.0000291967291968 \)
 \end{center}
 \end{document}
