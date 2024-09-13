@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{txfonts}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage{amsmath}
+\title{Assignment1}
+\begin{document}
+\section*{Assignment 1}
+\author{Wu Yuze}
+
+\section*{Student Info}
+Student Name: Wu Yuze\newline
+Student No. 2109853F-I110-013
+\section*{Problem}
+Solve the following system of linear equations using LU decomposition.
+$$
+\begin{bmatrix}
+    6 & $−2$ & 2 & 4 \\
+    12 & $−8$ & 6 & 10 \\
+    3 & $−13$ & 9 & 3 \\
+    $−6$ & 4 & 1 & $−18$ \\
+\end{bmatrix}
+\begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    12 \\
+    34 \\
+    27 \\
+    $-38$ \\
+\end{bmatrix}
+$$
+\section*{Answer}
+$$
+L = 
+\begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    2 & 1 & 0 & 0 \\
+    \frac{1}{2} & 3 & 1 & 0 \\
+    $-1$ & -\frac{1}{2} & 2 & 1 \\
+\end{bmatrix}
+U = 
+\begin{bmatrix}
+    6 & $-2$ & 2 & 4 \\
+    0 & $-4$ & 2 & 2 \\
+    0 & 0 & 2 & $-5$ \\
+    0 & 0 & 0 & $-3$ 
+\end{bmatrix}
+Y = 
+\begin{bmatrix}
+    12 \\
+    10 \\
+    $-9$ \\
+    $-3$ \\
+\end{bmatrix}
+X = 
+\begin{bmatrix}
+    1 \\
+    $-3$ \\
+    $-2$ \\
+    1 \\
+\end{bmatrix}
+$$
+\end{document}
